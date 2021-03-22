@@ -54,6 +54,16 @@ class ObjectTree:
         self.tree = test(self.value_raw)
 
 
+class RedisTree:
+    object_tree:ObjectTree=None
+    types = None
+    level = "root"
+    data = None
+    key = None
+    def __init__(self,obj):
+        self.object_tree=ObjectTree(obj)
+
+
 def redis_set(key: str, value: object, tree: ObjectTree, **param):
     r = redis.Redis(connection_pool=pool)
     if type(value) is type(str()):
