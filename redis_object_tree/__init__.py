@@ -64,4 +64,4 @@ def redis_set(key: str, value: object, tree: ObjectTree, **param):
 
 if __name__ == "__main__":
     # set('aaa', 'bbb', ex=10)
-    ObjectTree({'a': 2, "b": [1, "2", 3, {'aa': 123}], "c": (1, 2, 3)})
+    ObjectTree([{},{}])
